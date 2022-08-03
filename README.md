@@ -225,6 +225,31 @@ https://github.com/sequelize/sequelize
 
 <br>
 
+## **2.4 Introducing ConfigService**
+
+Configuration
+응용 프로그램은 종종 다른 환경에서 실행됩니다. 환경에 따라 다른 구성 설정을 사용해야 합니다.
+Nest에서 이 기술을 사용하는 좋은 방법은 적절한 .env 파일을 로드하는 ConfigService를 노출하는 ConfigModule을 만드는 것입니다.
+npm i @nestjs/config --save
+
+```json
+"start:dev": "cross-env NODE_ENV=dev nest start --watch",
+```
+
+https://docs.nestjs.com/techniques/configuration
+
+cross-env
+NODE_ENV=production으로 환경 변수를 설정하면 대부분의 Windows 명령 프롬프트가 질식합니다.
+cross-env를 사용하면 플랫폼에 맞게 환경 변수를 설정하거나 사용하는 것에 대해 걱정하지 않고 단일 명령을 사용할 수 있습니다.
+POSIX 시스템에서 실행되는 것처럼 설정하기만 하면 cross-env가 적절하게 설정합니다.
+npm i cross-env
+https://www.npmjs.com/package/cross-env
+
+- 주의! npm 레지스트리의 `crossenv` 멀웨어
+  npm i crossenv (설치 X)
+
+<br>
+
 # 3 TYPEORM AND NEST
 
 <br>
