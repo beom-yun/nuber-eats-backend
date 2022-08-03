@@ -172,6 +172,57 @@ $ npm i class-transformer
 
 # 2 DATABASE CONFIGURATION
 
+## **2.0 TypeORM and PostgreSQL**
+
+TypeORM
+https://typeorm.io/#/
+
+Postgresapp
+https://postgresapp.com/
+
+Postico
+https://eggerapps.at/postico
+
+PostgreSQL Download
+https://www.postgresql.org/download/
+
+<br>
+
+## **2.1 MacOS Setup**
+
+데이터베이스의 모든 유저 확인 (권한 확인)
+\du
+
+데이터베이스의 유저 비밀번호 변경
+ALTER USER 유저명 WITH PASSWORD ‘비밀번호’
+
+<br>
+
+## **2.3 TypeORM Setup**
+
+TypeORM
+TypeORM은 NodeJS, Browser, Cordova, PhoneGap, Ionic, React Native, NativeScript, Expo 및 Electron 플랫폼에서 실행할 수 있는 ORM이며 TypeScript 및 JavaScript(ES5, ES6, ES7, ES8)와 함께 사용할 수 있습니다.
+https://github.com/typeorm/typeorm
+
+Database
+Nest는 데이터베이스에 구애받지 않으므로 모든 SQL 또는 NoSQL 데이터베이스와 쉽게 통합할 수 있습니다.
+https://docs.nestjs.com/techniques/database
+
+TypeORM Integration
+SQL 및 NoSQL 데이터베이스와의 통합을 위해 Nest는 @nestjs/typeorm 패키지를 제공합니다.
+Nest는 TypeScript에서 사용할 수 있는 가장 성숙한 ORM(Object Relational Mapper)이기 때문에 TypeORM을 사용합니다.
+TypeScript로 작성되었기 때문에 Nest 프레임워크와 잘 통합됩니다.
+
+설치
+npm install --save @nestjs/typeorm typeorm pg
+
+Warning
+synchronize: true은 production에서 사용하면 안됩니다.
+그렇지 않으면 production데이터가 손실될 수 있습니다.
+
+Sequelize
+https://github.com/sequelize/sequelize
+
 <br>
 
 # 3 TYPEORM AND NEST
