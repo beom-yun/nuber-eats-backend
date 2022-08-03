@@ -250,6 +250,30 @@ https://www.npmjs.com/package/cross-env
 
 <br>
 
+## **2.5 Configuring ConfigService**
+
+.env.dev
+
+```
+DB_HOST=
+DB_PORT=
+DB_USERNAME=
+DB_PASSWORD=
+DB_NAME=
+```
+
+ConfigModule.forRoot({})
+
+```
+host: process.env.DB_HOST,
+port: +process.env.DB_PORT,
+username: process.env.DB_USERNAME,
+password: process.env.DB_PASSWORD,
+database: process.env.DB_NAME,
+```
+
+<br>
+
 # 3 TYPEORM AND NEST
 
 <br>
