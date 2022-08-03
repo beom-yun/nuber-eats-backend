@@ -274,6 +274,27 @@ database: process.env.DB_NAME,
 
 <br>
 
+## **2.6 Validating ConfigService**
+
+Joi
+
+JavaScript용 가장 강력한 스키마 설명 언어 및 데이터 유효성 검사기.
+npm i joi
+https://joi.dev/api/?v=17.4.2
+https://www.npmjs.com/package/joi
+
+Schema validation
+
+Joi 내장 유효성 검사기.Joi를 사용하여 개체 스키마를 정의하고 이에 대해 JavaScript 개체의 유효성을 검사합니다.
+https://docs.nestjs.com/techniques/configuration#schema-validation
+
+validationOptions
+
+allowUnknown: 환경 변수에 알 수 없는 키를 허용할지 여부를 제어합니다.기본값은 true입니다.
+abortEarly: true인 경우 첫 번째 오류에서 유효성 검사를 중지합니다. 거짓이면 모든 오류를 반환합니다. 기본값은 false입니다.
+
+<br>
+
 # 3 TYPEORM AND NEST
 
 <br>
