@@ -297,6 +297,16 @@ abortEarly: true인 경우 첫 번째 오류에서 유효성 검사를 중지합
 
 # 3 TYPEORM AND NEST
 
+## **3.0 Our First Entity**
+
+TypeORM Entity
+
+Entity는 데이터베이스 테이블(또는 MongoDB를 사용할 때 컬렉션)에 매핑되는 클래스입니다. 새 클래스를 정의하고 @Entity()로 표시하여 엔터티를 만들 수 있습니다. 기본 엔터티는 열과 관계로 구성됩니다. 각 엔터티에는 기본 열(또는 MongoDB를 사용하는 경우 ObjectId 열)이 있어야 합니다(MUST).
+
+https://typeorm.io/#/entities
+
+<br>
+
 <br>
 
 # 4 USER CRUD
