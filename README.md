@@ -358,6 +358,20 @@ https://docs.nestjs.com/recipes/mikroorm#repositories
 
 <br>
 
+## **3.4 Create Repository**
+
+create()
+엔티티 생성
+새 엔티티 인스턴스를 만들고 이 개체의 모든 엔터티 속성을 새 엔티티에 복사합니다. 엔터티 스키마에 있는 속성만 복사합니다.
+
+save()
+엔티티를 데이터베이스에 저장 또는 업데이트
+데이터베이스에 지정된 모든 엔터티를 저장합니다. 엔티티가 데이터베이스에 없으면 삽입하고, 그렇지 않으면 업데이트합니다.
+
+https://typeorm.io/#/undefined/save-a-one-to-one-relation
+
+<br>
+
 # 4 USER CRUD
 
 <br>
