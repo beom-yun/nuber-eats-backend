@@ -393,6 +393,14 @@ https://docs.nestjs.com/graphql/mapped-types
 
 <br>
 
+## **3.8 Update Restaurant part Two**
+
+update()
+
+엔티티를 부분적으로 업데이트합니다. 엔티티는 주어진 조건으로 찾을 수 있습니다. save 메소드와 달리 캐스케이드, 관계 및 기타 작업이 포함되지 않은 기본 작업을 실행합니다. 빠르고 효율적인 UPDATE 쿼리를 실행합니다. 데이터베이스에 엔터티가 있는지 확인하지 않습니다.
+
+<br>
+
 # 4 USER CRUD
 
 <br>
