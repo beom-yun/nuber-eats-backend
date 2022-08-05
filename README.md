@@ -422,6 +422,30 @@ GraphQLError [Object]: Query root type must be provided
 
 <br>
 
+## **4.4 Create Account Mutation part Two**
+
+Enums
+enum은 특정 허용 값 집합으로 제한되는 특수한 종류의 스칼라입니다.
+이 유형의 모든 인수가 허용되는 값 중 하나인지 확인
+필드가 항상 유한한 값 집합 중 하나임을 유형 시스템을 통해 전달
+
+code first 접근 방식을 사용할 때 TypeScript enum을 생성하여 GraphQL enum type을 정의합니다.
+registerEnumType 함수를 사용하여 AllowedColor enum을 등록합니다.
+
+```ts
+export enum AllowedColor {
+  RED,
+  GREEN,
+  BLUE,
+}
+registerEnumType(AllowedColor, { name: 'AllowedColor' });
+```
+
+https://docs.nestjs.com/graphql/unions-and-enums#code-first-1
+https://www.typescriptlang.org/ko/docs/handbook/enums.html
+
+<br>
+
 # 5 USER AUTHENTICATION
 
 <br>
