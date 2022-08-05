@@ -528,6 +528,33 @@ https://jwt.io/
 
 <br>
 
+## **5.2 JWT and Modules**
+
+Dynamic modules
+
+Nest 모듈 시스템에는 동적 모듈이라는 강력한 기능이 포함되어 있습니다.
+이 기능을 사용하면 커스터마이징 가능한 모듈을 쉽게 만들 수 있게 합니다.
+커스터마이징 가능한 모듈은 provider를 등록하고 동적으로 구성할 수 있습니다.
+https://docs.nestjs.com/fundamentals/dynamic-modules#dynamic-modules
+https://docs.nestjs.com/modules#dynamic-modules
+
+NestJS에서의 Modules 개념
+
+모듈은 @Module() 데코레이터로 주석이 달린 클래스입니다.
+@Module() 데코레이터는 Nest가 애플리케이션 구조를 구성하는 데 사용하는 메타데이터를 제공합니다.
+https://docs.nestjs.com/modules
+
+Static Module (정적 모듈)
+어떠한 설정도 적용되어 있지 않은 모듈
+
+Dynamic Module (동적 모듈)
+설정이 적용되어 있거나 설정을 적용할 수 있는 모듈
+
+JWT
+https://jwt.io
+
+<br>
+
 # 6 EMAIL VERIFICATION
 
 ## **6.1 Creating Verifications**
