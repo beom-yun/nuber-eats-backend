@@ -578,6 +578,42 @@ https://docs.nestjs.com/modules#global-modules
 
 <br>
 
+## **5.4 JWT Module part Two**
+
+Standard providers
+
+아래 코드는 providers: [CatsService]의 축약형입니다.
+
+```ts
+providers: [{ provide: CatsService, useClass: CatsService }];
+```
+
+https://docs.nestjs.com/fundamentals/custom-providers#standard-providers
+
+useClass (Class providers)
+provider의 타입 (주입되야 할 인스턴스 클래스 이름)
+프로바이더로 사용할 클래스?
+useClass 구문을 사용하면 토큰이 해결해야 하는 클래스를 동적으로 결정할 수 있습니다.
+예를 들어 추상(또는 기본) ConfigService 클래스가 있다고 가정합니다.
+현재 환경에 따라 Nest가 구성 서비스의 다른 구현을 제공하기를 바랍니다.
+
+```ts
+useClass:
+process.env.NODE_ENV === 'development'
+? DevelopmentConfigService
+: ProductionConfigService,
+```
+
+https://docs.nestjs.com/fundamentals/custom-providers#class-providers-useclass
+
+useValue (Value providers)
+
+주입한 provider의 인스턴스
+useValue 구문은 상수 값을 주입하거나 외부 라이브러리를 Nest 컨테이너에 넣거나 실제 구현을 모의 객체로 교체하는 데 유용합니다.
+https://docs.nestjs.com/fundamentals/custom-providers#value-providers-usevalue
+
+<br>
+
 # 6 EMAIL VERIFICATION
 
 ## **6.1 Creating Verifications**
