@@ -667,6 +667,37 @@ https://www.npmjs.com/package/jsonwebtoken#jwtdecodetoken--options
 
 <br>
 
+## **5.8 GraphQL Context**
+
+Context
+
+각 request에 대해 request context를 사용할 수 있습니다. context가 함수로 정의되면 각 request마다 호출되고 req 속성에 request 객체를 받습니다.
+
+```ts
+context: async ({ req }) => {
+  return {
+    myProperty: true
+  };
+},
+```
+
+https://github.com/apollographql/apollo-server#context
+
+@Context()
+
+ex) @Context() context로 context를 가져오거나
+@Context("loggedInUser") loggedInUser로 context안에 loggedInUser가 있다면 바로 가져올 수도 있습니다.
+
+```
+@Context(param?: string) // NestJS
+
+context / context[param] // Apollo
+```
+
+https://docs.nestjs.com/graphql/resolvers#graphql-argument-decorators
+
+<br>
+
 # 6 EMAIL VERIFICATION
 
 ## **6.1 Creating Verifications**
