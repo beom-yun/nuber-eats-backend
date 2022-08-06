@@ -614,6 +614,39 @@ https://docs.nestjs.com/fundamentals/custom-providers#value-providers-usevalue
 
 <br>
 
+## **5.6 Middlewares in NestJS**
+
+Middleware
+
+미들웨어는 라우트 핸들러 전에 호출되는 함수입니다. 미들웨어 함수는 request 및 response 객체에 접근할 수 있으며 애플리케이션의 request-response 주기에 있는 next() 미들웨어 함수에 접근할 수 있습니다. next 미들웨어 함수는 일반적으로 next라는 변수로 표시됩니다.
+Nest 미들웨어는 기본적으로 익스프레스 미들웨어와 동일합니다.
+함수 또는 @Injectable() 데코레이터가 있는 클래스에서 사용자 지정 Nest 미들웨어를 구현합니다.
+https://docs.nestjs.com/middleware#middleware
+
+Applying middleware (미들웨어 적용)
+
+@Module() 데코레이터에는 미들웨어가 들어갈 자리가 없습니다. 대신 모듈 클래스의 configure() 메서드를 사용하여 설정합니다. 미들웨어를 포함하는 모듈은 NestModule 인터페이스를 implement해야 합니다.
+https://docs.nestjs.com/middleware#applying-middleware
+
+Middleware consumer
+
+MiddlewareConsumer는 도우미 클래스입니다. 미들웨어를 관리하는 몇 가지 기본 제공 방법을 제공합니다. forRoutes() 메서드는 단일 문자열, 여러 문자열, RouteInfo 객체, 컨트롤러 클래스 및 여러 컨트롤러 클래스를 사용할 수 있습니다. 대부분의 경우 쉼표로 구분된 컨트롤러 목록을 전달할 것입니다.
+
+apply()
+
+apply() 메서드는 단일 미들웨어를 사용하거나 여러 인수를 사용하여 여러 미들웨어를 지정할 수 있습니다.
+
+exclude()
+
+지정한 경로에서 미들웨어의 실행을 제외합니다.
+
+forRoutes()
+
+전달된 경로 또는 컨트롤러에서 미들웨어를 실행합니다. 클래스를 전달하면 Nest는 이 컨트롤러 내에 정의된 모든 경로에 미들웨어를 실행합니다.
+https://docs.nestjs.com/middleware#middleware-consumer
+
+<br>
+
 # 6 EMAIL VERIFICATION
 
 ## **6.1 Creating Verifications**
