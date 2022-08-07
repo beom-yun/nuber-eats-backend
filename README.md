@@ -698,6 +698,35 @@ https://docs.nestjs.com/graphql/resolvers#graphql-argument-decorators
 
 <br>
 
+## **5.9 AuthGuard**
+
+Guards
+
+가드는 CanActivate 인터페이스를 구현하는 @Injectable() 데코레이터로 주석이 달린 클래스입니다.
+런타임에 존재하는 특정 조건에 따라 주어진 요청이 경로 핸들러에 의해 처리되는지 여부를 결정합니다.
+이것을 흔히 권한 부여라고 합니다.권한 부여는 일반적으로 기존 Express 애플리케이션의 미들웨어에 의해 처리되었습니다.
+그러나 미들웨어는 본질적으로 멍청합니다.next() 함수를 호출한 후 어떤 핸들러가 실행될지 모릅니다.
+Guards는 ExecutionContext 인스턴스에 액세스할 수 있으므로 다음에 실행될 항목을 정확히 알고 있습니다.
+토큰을 추출 및 검증하고 추출된 정보를 사용하여 요청을 진행할 수 있는지 여부를 결정합니다.
+https://docs.nestjs.com/guards
+
+@UseGuard() (Binding guards)
+
+파이프 및 예외 필터와 마찬가지로 가드는 컨트롤러 범위, 메서드 범위 또는 전역 범위일 수 있습니다. 아래에서 @UseGuards() 데코레이터를 사용하여 컨트롤러 범위 가드를 설정합니다.
+https://docs.nestjs.com/guards#binding-guards
+
+GqlExecutionContext (Execution context)
+
+GraphQL은 들어오는 요청에서 다른 유형의 데이터를 수신하기 때문에 가드와 인터셉터 모두에서 수신하는 실행 컨텍스트는 GraphQL과 REST에서 다소 다릅니다. GraphQL resolver에는 root, args, context, and info와 같은 고유한 인수 집합이 있습니다. 따라서 가드와 인터셉터는 일반 ExecutionContext를 GqlExecutionContext로 변환해야 합니다.
+ex) const ctx = GqlExecutionContext.create(context);
+https://docs.nestjs.com/graphql/other-features#execution-context
+
+authentication: 토큰의 유효성 확인
+
+authorization: 유저가 어떤 일을 하기 전에 그 일을 할 수 있는 권한이 있는지 확인
+
+<br>
+
 # 6 EMAIL VERIFICATION
 
 ## **6.1 Creating Verifications**
