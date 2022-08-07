@@ -727,6 +727,29 @@ authorization: 유저가 어떤 일을 하기 전에 그 일을 할 수 있는 �
 
 <br>
 
+## **5.10 AuthUser Decorator**
+
+Custom decorators
+
+나만의 커스텀 데코레이터를 만들 수 있습니다. node.js 세계에서는 request 객체에 속성을 첨부하는 것이 일반적입니다.
+코드를 더 읽기 쉽고 투명하게 만들기 위해 @User() 데코레이터를 만들고 모든 컨트롤러에서 재사용할 수 있습니다.
+
+```ts
+import { createParamDecorator, ExecutionContext } from '@nestjs/common';
+
+export const User = createParamDecorator(
+  (data: unknown, ctx: ExecutionContext) => {
+    const request = ctx.switchToHttp().getRequest();
+    return request.user;
+  },
+);
+```
+
+https://docs.nestjs.com/graphql/other-features#custom-decorators
+https://docs.nestjs.com/custom-decorators
+
+<br>
+
 # 6 EMAIL VERIFICATION
 
 ## **6.1 Creating Verifications**
