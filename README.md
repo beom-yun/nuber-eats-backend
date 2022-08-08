@@ -789,6 +789,30 @@ https://github.com/typeorm/typeorm/blob/master/docs/listeners-and-subscribers.md
 
 # 6 EMAIL VERIFICATION
 
+## **6.0 Verification Entity**
+
+One-to-one relations (1:1관계)
+
+일대일 관계는 A가 B의 인스턴스를 하나만 포함하고 B가 A의 인스턴스를 하나만 포함하는 관계입니다. 예를 들어 사용자 및 프로필 엔터티를 보면, 사용자는 하나의 프로필만 가질 수 있으며, 프로필은 하나의 사용자만 가질 수 있습니다.
+
+프로필에 @OneToOne을 추가하고 대상 관계 유형을 프로필로 지정했습니다.
+또한 relation의 한쪽에만 설정해야 하는 @JoinColumn() 을 추가했습니다. (@JoinColumn()은 필수로 지정해야 함)
+@JoinColumn()을 설정한 쪽의 테이블에는 해당되는 엔터티 테이블에 대한 relation id와 foreign keys가 포함됩니다.
+@JoinColumn은 관계의 한 쪽, 즉 데이터베이스 테이블에 foreign key가 있어야 하는 쪽에만 설정해야 합니다.
+
+요약: Verification을 통해 그 안에 User에 접근해서 User의 emailVerified를 false에서 true로 바꿀 것이기 때문에 Verification쪽에 @JoinColumn()을 추가하고 user를 통해 생성한 foreign key인 userId을 추가하도록 한 것이다.
+
+```ts
+@OneToOne(() => Profile)
+@JoinColumn()
+profile: Profile;
+
+위와 같이 설정시 데이터베이스에는 profile에 대한 foreign key가 생김
+profileId | int(11) | FOREIGN KEY
+```
+
+https://typeorm.io/#/one-to-one-relations
+
 ## **6.1 Creating Verifications**
 
 uuid
