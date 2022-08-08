@@ -764,6 +764,18 @@ UpdateQueryBuilder 실행에 의해 반환된 결과 객체입니다.
 
 <br>
 
+## **5.14 updateProfile part Two**
+
+@BeforeUpdate()
+
+save()메서드를 사용하여 업데이트되기 전에 실행되는 데코레이터이다.
+엔티티에 메소드를 정의하고 @BeforeUpdate() 데코레이터를 사용하면 TypeORM이 기존 엔티티를 repository/manager save을 사용하여 업데이트되기 전에 이를 호출합니다.
+그러나 모델에서 정보가 변경된 경우에만 @BeforeUpdate() 데코레이터가 실행한다는 점에 유의하십시오. 모델에서 아무 것도 수정하지 않고 저장을 실행하면 @BeforeUpdate 및 @AfterUpdate가 실행되지 않습니다. (update메서드를 사용할 때는 실행하지 않음)
+
+https://github.com/typeorm/typeorm/blob/master/docs/listeners-and-subscribers.md#beforeupdate
+
+<br>
+
 # 6 EMAIL VERIFICATION
 
 ## **6.1 Creating Verifications**
