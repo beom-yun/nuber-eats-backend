@@ -776,6 +776,17 @@ https://github.com/typeorm/typeorm/blob/master/docs/listeners-and-subscribers.md
 
 <br>
 
+## **5.15 updateProfile part Three**
+
+@BeforeUpdate()
+
+save()메서드를 사용하여 업데이트되기 전에 실행되는 데코레이터이다.
+@BeforeUpdate()는 모델에서 정보가 변경된 경우에만 발생한다는 점에 유의하십시오. 모델에서 아무 것도 수정하지 않고 저장을 실행하면 @BeforeUpdate 및 @AfterUpdate가 실행되지 않습니다. 모델에서 변경된 것이 아닌 db에 update query만 보내고 있기 때문에 @BeforeUpdate() 데코레이터가 실행되지 않은 것이다.
+
+https://github.com/typeorm/typeorm/blob/master/docs/listeners-and-subscribers.md#beforeupdate
+
+<br>
+
 # 6 EMAIL VERIFICATION
 
 ## **6.1 Creating Verifications**
