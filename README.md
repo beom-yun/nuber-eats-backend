@@ -750,6 +750,20 @@ https://docs.nestjs.com/custom-decorators
 
 <br>
 
+## **5.13 updateProfile part One**
+
+update()
+
+엔티티를 부분적으로 업데이트합니다. 엔티티는 주어진 조건으로 찾을 수 있습니다. save 메소드와 달리 캐스케이드, 관계 및 기타 작업이 포함되지 않은 기본 작업을 실행합니다. 빠르고 효율적인 UPDATE 쿼리를 실행합니다. 데이터베이스에 엔터티가 있는지 확인하지 않습니다.
+ex) this.usersRepository.update(id, { email, password })
+
+update()메서드 반환값: UpdateResult
+UpdateQueryBuilder 실행에 의해 반환된 결과 객체입니다.
+
++editProfile에서 이메일을 수정할 때, 이미 존재하는 지는 체크 필요
+
+<br>
+
 # 6 EMAIL VERIFICATION
 
 ## **6.1 Creating Verifications**
