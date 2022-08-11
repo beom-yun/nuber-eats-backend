@@ -998,6 +998,11 @@ https://www.npmjs.com/package/mailgun.js
 
 <br>
 
+## **6.8 Beautiful Emails**
+
+Mailgun에서 보낸 이메일이 스팸함으로 가시는 분들은 이메일 주소를 다르게 바꿔보세요. 이메일 주소를 다르게 바꾸니 스팸이 아닌 일반 메일함에서 받을 수 있네요.
+예) formData.append('from', `Nuber < Nuber@mailgun-test.com >`);
+
 Handlebars
 핸들바는 간단한 템플릿 언어입니다. 템플릿과 input객체를 사용하여 HTML 또는 기타 텍스트 형식을 생성합니다.
 

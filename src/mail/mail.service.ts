@@ -16,12 +16,14 @@ export class MailService {
       .catch(error => console.log(error.response.body));
   }
 
-  private async sendEmail(subject: string, content: string) {
+  private async sendEmail(subject: string, template: string) {
     const form = new FormData();
     form.append('from', `Excited User <mailgun@${this.options.domain}>`);
     form.append('to', `scds0326@naver.com`);
     form.append('subject', subject);
-    form.append('text', content);
+    form.append('template', template);
+    form.append('v:code', 'asas');
+    form.append('v:username', 'yun');
     const response = await got(
       `https://api.mailgun.net/v3/${this.options.domain}/messages`,
       {
